@@ -5,12 +5,11 @@ const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const number = "1234567890";
 const symbol = "!@#$%^&*[]{}/+_,.;:|`~";
 const allCharacters = uppercase + lowercase + number + symbol;
-let password = "";
+
 
 
 function generatePassword() {
-
-
+    let password = "";
     password += uppercase[Math.floor(Math.random() * uppercase.length)];
     password += lowercase[Math.floor(Math.random() * lowercase.length)];
     password += number[Math.floor(Math.random() * number.length)];
