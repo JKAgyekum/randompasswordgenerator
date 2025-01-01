@@ -1,5 +1,5 @@
 const passwordBox = document.getElementById('password');
-const passwordLength = 12;
+const passwordLength = 24;
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const number = "1234567890";
@@ -10,13 +10,13 @@ let password = "";
 
 function generatePassword() {
 
+
     password += uppercase[Math.floor(Math.random() * uppercase.length)];
     password += lowercase[Math.floor(Math.random() * lowercase.length)];
     password += number[Math.floor(Math.random() * number.length)];
     password += symbol[Math.floor(Math.random() * symbol.length)];
 
-
-    while (passwordLength >= password.length) {
+    while (password.length >= passwordLength) {
         password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
     }
     passwordBox.value = password;
