@@ -1,5 +1,6 @@
 const passwordBox = document.getElementById('password');
-const passwordLength = 24;
+const toastBox = document.getElementById('toast');
+const passwordLength = 16;
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const number = "1234567890";
@@ -26,4 +27,10 @@ function generatePassword() {
 function copyPassword() {
     passwordBox.select();
     navigator.clipboard.writeText(passwordBox.value);
+    showToast()
+}
+
+function showToast(){
+    console.log('Copied to clipboard');
+
 }
