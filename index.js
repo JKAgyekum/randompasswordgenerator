@@ -15,7 +15,7 @@ function generatePassword() {
     password += number[Math.floor(Math.random() * number.length)];
     password += symbol[Math.floor(Math.random() * symbol.length)];
 
-    while (password.length >= passwordLength) {
+    while (passwordLength > password.length) {
         password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
     }
     passwordBox.value = password;
