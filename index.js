@@ -1,6 +1,4 @@
 const passwordBox = document.getElementById('password');
-const toastBox = document.getElementById('toast');
-const passwordLength = 16;
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const number = "1234567890";
@@ -11,16 +9,19 @@ const allCharacters = uppercase + lowercase + number + symbol;
 
 function generatePassword() {
     let password = "";
-    password += uppercase[Math.floor(Math.random() * uppercase.length)];
-    password += lowercase[Math.floor(Math.random() * lowercase.length)];
-    password += number[Math.floor(Math.random() * number.length)];
-    password += symbol[Math.floor(Math.random() * symbol.length)];
-
-    while (passwordLength > password.length) {
-        password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+    const length = document.getElementById('password-length').value;
+    password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * allCharacters.length);
+        password += allCharacters[randomIndex];
     }
     passwordBox.value = password;
-    console.log(password.length);
+    console.log(password);
+
+}
+
+function updateLengthDisplay(value) {
+    document.getElementById('length-display').textContent = value;
 }
 
 
@@ -31,6 +32,9 @@ function copyPassword() {
 }
 
 function showToast(){
-    console.log('Copied to clipboard');
+    const toastBox = document.getElementById('toast');
+    toastBox.textContent = 'This is a toast notification!';
+    console.log(toastBox.textContent);
 
 }
+

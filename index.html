@@ -6,14 +6,30 @@
     <link rel = 'stylesheet' type = 'text/css' href = 'style.css'>
 </head>
 <body>
+
+
 <div class="container">
     <h1>Generate a <br><span>Random Password</span> </h1>
     <div class="display">
-        <input type = "text" id = "password" placeholder = "Password">
+        <input type = "text" id = "password" placeholder = "Password" readonly>
         <img src="images/copy.png" alt = "Password" onclick = "copyPassword()">
     </div>
     <button onclick = "generatePassword()"><img src = "images/generate.png" alt = "generate">Generate Password</button>
 </div>
+
+<div class="container">
+    <label for="password-length">Password Length:</label>
+    <input
+            type="range"
+            id="password-length"
+            name="password-length"
+            min="8"
+            max="32"
+            value="16"
+            oninput="updateLengthDisplay(this.value)">
+    <span id="length-display">16</span> characters
+</div>
+
 
 <script src = 'index.js'></script>
 

@@ -46,8 +46,9 @@ body{
 
 .display input{
     border: 0;
+    width: 100%;
     outline: 10px;
-    justify-content: center;
+    justify-content: space-between;
     background: transparent;
     color: inherit;
     font-size: 21px;
@@ -70,4 +71,16 @@ body{
     padding: 16px 26px;
     cursor: pointer;
     border-radius: 5px;
+}
+label {
+    display: block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #019f55;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
 }
