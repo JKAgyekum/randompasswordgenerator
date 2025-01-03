@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da853b3-2c14-4600-98b9-fbf7e12621bb" name="Changes" comment="generates 24 characters now">
+    <list default="true" id="0da853b3-2c14-4600-98b9-fbf7e12621bb" name="Changes" comment="password-length feature added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +119,7 @@
       <updated>1735739423285</updated>
       <workItem from="1735739424353" duration="9719000" />
       <workItem from="1735753639354" duration="6401000" />
-      <workItem from="1735832700531" duration="1758000" />
+      <workItem from="1735832700531" duration="4221000" />
     </task>
     <task id="LOCAL-00001" summary="generatePassword() has been enhanced!">
       <option name="closed" value="true" />
@@ -152,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735758371354</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="password-length feature added.">
+      <option name="closed" value="true" />
+      <created>1735834787113</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735834787113</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +181,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="generatePassword() has been enhanced!" />
     <MESSAGE value="generates 24 characters now" />
-    <option name="LAST_COMMIT_MESSAGE" value="generates 24 characters now" />
+    <MESSAGE value="password-length feature added." />
+    <option name="LAST_COMMIT_MESSAGE" value="password-length feature added." />
   </component>
 </project>

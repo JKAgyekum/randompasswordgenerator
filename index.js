@@ -21,20 +21,38 @@ function generatePassword() {
 }
 
 function updateLengthDisplay(value) {
-    document.getElementById('length-display').textContent = value;
+   let text = document.getElementById('length-display').textContent = value;
+   console.log(text);
 }
 
 
 function copyPassword() {
     passwordBox.select();
-    navigator.clipboard.writeText(passwordBox.value);
-    showToast()
+    let checker = navigator.clipboard.writeText(passwordBox.value);
+    while (checker) {
+     showToast()
+ }
+
+
 }
 
 function showToast(){
     const toastBox = document.getElementById('toast');
-    toastBox.textContent = 'This is a toast notification!';
-    console.log(toastBox.textContent);
+
+    if (toastBox) {
+        toastBox.textContent = 'Copied to clipboard!';
+
+        toastBox.classList.add('show');
+        console.log(toastBox.textContent);
+
+
+        setTimeout(() => {
+            toastBox.classList.remove('show');
+        }, 3000);
+    } else {
+        console.error("Toast element not found!");
+    }
+
 
 }
 
