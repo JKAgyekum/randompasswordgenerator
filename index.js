@@ -4,6 +4,55 @@ const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const number = "1234567890";
 const symbol = "!@#$%^&*[]{}/+_,.;:|`~";
 const allCharacters = uppercase + lowercase + number + symbol;
+const notesContainer  = document.querySelector(".notes-container");
+const creatBtn = document.querySelector(".btn");
+let notes = document.querySelectorAll(".input-box");
+
+
+//how to use js to write your html.
+
+function showNotes(){
+    notesContainer.innerHTML = localStorage.getItem("notes");
+
+}
+showNotes();
+function updateStorage(){
+    localStorage.setItem("notes", notesContainer.innerHTML);
+}
+
+
+
+
+creatBtn.addEventListener("click", () => {
+    let inputBox = document.createElement("p");
+    let img = document.createElement("img");
+    img.src = "images/delete.png";
+    inputBox.className = "input-box";
+    inputBox.setAttribute("contenteditable", "true");
+    notesContainer.appendChild(inputBox).appendChild(img);
+})
+
+notesContainer.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") {
+        e.target.parentElement.remove();
+        updateStorage();
+    }
+    else if (e.target.tagName === "P") {
+        notes = document.querySelectorAll(".input-box");
+        notes.forEach(note => {
+            note.onkeyup = function () {
+                updateStorage();
+            }
+        })
+    }
+})
+
+document.addEventListener("keydown", (e) => {
+    if(event.key === "Enter") {
+        document.exeCommand("insertLineBreak");
+        event.preventDefault();
+    }
+})
 
 
 

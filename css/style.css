@@ -47,11 +47,11 @@ body{
 .display input{
     border: 0;
     width: 100%;
-    outline: 10px;
+    outline: 0;
     justify-content: space-between;
     background: transparent;
     color: inherit;
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .container button img{
@@ -80,14 +80,15 @@ label {
     color: #019f55;
 }
 
-input[type="range"] {
-    width: 100%;
+.container input[type="range"] {
+    width: 50%;
     margin: 10px 0;
 }
 .toast {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    width: 100%;
     background-color: #28a745;
     color: #fff;
     padding: 10px 20px;
@@ -98,6 +99,6 @@ input[type="range"] {
 }
 
 .toast.show {
-    opacity: 1;
+    opacity: 0;
     visibility: visible;
 }
